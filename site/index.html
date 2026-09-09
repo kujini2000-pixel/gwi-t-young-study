@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GWI-T-YOUNG Study Calendar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">GWI-T-YOUNG · ENGLISH STUDY</p>
+      <h1>Study Calendar</h1>
+      <p class="intro">Choose a lesson day, open the deck, and mark your study complete.</p>
+    </header>
+    <section class="summary" aria-label="Monthly study summary">
+      <div><strong id="doneCount">0</strong><span>days completed</span></div>
+      <div><strong id="lessonCount">0</strong><span>lessons available</span></div>
+    </section>
+    <section class="calendar-panel">
+      <div class="calendar-header"><button id="previous" aria-label="Previous month">←</button><h2 id="monthLabel"></h2><button id="next" aria-label="Next month">→</button></div>
+      <div class="weekdays" aria-hidden="true"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+      <div class="calendar" id="calendar"></div>
+    </section>
+    <section class="lesson-panel" id="lessonPanel" aria-live="polite"><p>Select a lesson date on the calendar.</p></section>
+    <p class="note">Green means you marked the lesson complete. Study records use the connected Google Sheet when its endpoint is configured.</p>
+  </main>
+  <script src="data/config.js"></script>
+  <script src="data/lessons.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
